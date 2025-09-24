@@ -95,17 +95,6 @@ Your agent will now be:
 - **Discoverable**: Listed in the MIT NANDA Index
 - **Interoperable**: Can communicate with other agents using @agent_id syntax
 
-### Standalone Usage (without NANDA)
-
-For local development or standalone usage:
-
-```bash
-# Direct query
-python main.py "Tell me about Elon Musk"
-
-# Demo mode with examples
-python main.py --demo
-```
 
 ### Python API
 
@@ -124,17 +113,6 @@ if result["success"]:
     print(result["report"])
 else:
     print(f"Error: {result['error']}")
-```
-
-### Streaming Results
-
-For streaming results (currently returns full result):
-
-```python
-agent = PersonLookupAgent()
-
-for chunk in agent.lookup_person_stream("Tell me about Marie Curie"):
-    print(chunk, end="", flush=True)
 ```
 
 ## Report Structure
